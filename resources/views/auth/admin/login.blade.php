@@ -53,11 +53,11 @@
                                 {{ __('Login') }}
                             </button>
 
-                            @if (Route::has('password.request'))
-                                <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
+                            @if (Route::has('admin.password.request'))
+                            <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('admin.password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        @endif
 
                             @if (Route::has('register'))
                                 <p class="w-full text-xs text-center text-gray-700 mt-8 -mb-4">

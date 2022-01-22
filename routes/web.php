@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\Auth\ForgotPasswordAdminController;
+use App\Http\Controllers\Auth\ResetPasswordAdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +34,12 @@ Route::group([
     Route::get("login", [AdminLoginController::class, 'showLoginForm'])->name("admin.show_login");
     Route::post("login", [AdminLoginController::class , 'login'])->name("admin.do_login");
     Route::post("logout", [AdminLoginController::class, 'logout'])->name("admin.logout");
+
+      // password reset
+    Route::get('/password/reset', [ForgotPasswordAdminController::class, 'showLinkRequestForm'])->name('admin.password.request');
+    Route::post('/password/email', [ForgotPasswordAdminController::class,'sendResetLinkEmail'])->name('admin.password.email');
+    Route::get('/password/reset/{token}', [ResetPasswordAdminController::class, 'showResetForm'])->name('admin.password.reset');
+    Route::post('/password/reset', [ResetPasswordAdminController::class, 'reset'])->name('admin.password.update');
 });
 
 Route::group([
