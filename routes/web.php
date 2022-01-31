@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\ForgotPasswordAdminController;
 use App\Http\Controllers\Auth\ResetPasswordAdminController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -57,3 +58,11 @@ Route::group([
     })->middleware("role:administrator|moderator");
 });
 
+Route::group(["prefix" => "{lang}"], function() {
+    Route::get("/", function() {
+        echo __("test");
+    });
+    Route::get("/test", function() {
+        return view("test");
+    })->name("test-lang");
+});
