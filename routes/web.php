@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\ResetPasswordAdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,16 @@ Route::group([
     })->middleware("role:administrator|moderator");
 });
 
+// routes/web.php
+
+Route::group(['prefix' => LaravelLocalization::setLocale(),
+'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'
+]], function()
+{
+	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+	Route::get('test', function()
+	{
+		return View('test');
+	});
+
+});
