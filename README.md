@@ -1,6 +1,15 @@
 # Laravel 7 - Realtime Chat Application
 
-You can watch the serie on my YouTube channel via this link 👉 [دورة تعلم ﻻرافيل 7 | Learn Laravel 7](https://www.youtube.com/playlist?list=PLfDx4cQoUNObqJzxBKEst6Sd8uw6C2qSK)
+
+
+<p align="center"><a href="https://chatra.com/_i/_NEW/Features/app-n-chat.jpg" target="_blank"><img src="https://chatra.com/_i/_NEW/Features/app-n-chat.jpg" width="400"></a></p>
+
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
 ## Instructions
 
